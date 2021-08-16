@@ -1,0 +1,9 @@
+.movies {
+    position: relative;
+    margin-top: 40px;
+    width: 100%;
+    .movies__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

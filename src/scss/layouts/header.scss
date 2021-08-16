@@ -1,0 +1,49 @@
+.header {
+    .container {
+        .header-content {
+            height: 80px;
+            align-items: center;
+            padding: 10px 10px;
+            display: flex;
+            justify-content: space-between;
+            .header-left {
+                display: flex;
+                cursor: pointer;
+                img {
+                    width: 50px;
+                }
+                h2 {
+                    font-family: "Quicksand", sans-serif;
+                    font-size: 20px;
+                    margin: 0;
+                    padding: 0;
+                    margin-top: 5px;
+                    color: #f8f8f8;
+                    margin-left: 5px;
+                }
+            }
+            .header-right {
+                align-items: center;
+                .list-menu {
+                    display: flex;
+                    li {
+                        cursor: pointer;
+                        color: #f8f8f8;
+                        padding: 15px 25px;
+                        i {
+                            padding-right: 5px;
+                            transition: all 0.5s ease;
+                        }
+                        a {
+                            text-transform: capitalize;
+                            color: #f8f8f8;
+                        }
+                        a:hover {
+                            color: #ff4c3b;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
