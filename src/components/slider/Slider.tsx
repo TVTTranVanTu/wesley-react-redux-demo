@@ -6,7 +6,7 @@ import cainhiep from '../../assets/img/slider/cainhiep.jpeg';
 const Slider: React.FC = () => {
   const [current, setCurrent] = useState(0);
 
-  function chunkArray(myArray: { image: string }[], chunk_size: number) {
+  const chunkArray = (myArray: { image: string }[], chunk_size: number) => {
     let index = 0;
     const arrayLength = myArray.length;
     const tempArray = [];
@@ -17,7 +17,7 @@ const Slider: React.FC = () => {
     }
 
     return tempArray;
-  }
+  };
 
   const result = chunkArray(sliderData, 6);
   const length = result.length;
@@ -31,16 +31,16 @@ const Slider: React.FC = () => {
   if (!Array.isArray(result) || result.length <= 0) {
     return null;
   }
-  console.log(result);
 
+  setTimeout(nextSlide, 7000);
   return (
     <div className="slider">
       <div className="container">
         <div className="slider__content">
-          <button type="button" className="arrow__prev" onClick={prevSlide}>
+          <button type="button" className="arrow arrow__prev" onClick={prevSlide}>
             <i className="fas fa-chevron-left"></i>
           </button>
-          <button type="button" className="arrow__next" onClick={nextSlide}>
+          <button type="button" className="arrow arrow__next" onClick={nextSlide}>
             <i className="fas fa-chevron-right"></i>
           </button>
           <div className="slider__list">
@@ -55,9 +55,27 @@ const Slider: React.FC = () => {
                       <div className="slide">
                         <div className="slide__images">
                           <div className="slide__item left">
-                            <img alt="slider" className="slider__image" src={slide[0].image} />
-                            <img alt="slider" className="slider__image" src={slide[1].image} />
-                            <img alt="slider" className="slider__image" src={slide[2].image} />
+                            <div className="image__content">
+                              <img
+                                alt="slider"
+                                className="slider__image img1"
+                                src={slide[0].image}
+                              />
+                            </div>
+                            <div className="image__content">
+                              <img
+                                alt="slider"
+                                className="slider__image img2"
+                                src={slide[1].image}
+                              />
+                            </div>
+                            <div className="image__content">
+                              <img
+                                alt="slider"
+                                className="slider__image img3"
+                                src={slide[2].image}
+                              />
+                            </div>
                           </div>
                           <img src={vetrang} className="logo__banner bn-right" alt="img" />
                         </div>
@@ -66,9 +84,27 @@ const Slider: React.FC = () => {
                         <div className="slide__images">
                           <img src={cainhiep} className="logo__banner bn-left" alt="img" />
                           <div className="slide__item right">
-                            <img alt="slider" className="slider__image" src={slide[3].image} />
-                            <img alt="slider" className="slider__image" src={slide[4].image} />
-                            <img alt="slider" className="slider__image" src={slide[5].image} />
+                            <div className="image__content">
+                              <img
+                                alt="slider"
+                                className="slider__image img4"
+                                src={slide[3].image}
+                              />
+                            </div>
+                            <div className="image__content">
+                              <img
+                                alt="slider"
+                                className="slider__image img5"
+                                src={slide[4].image}
+                              />
+                            </div>
+                            <div className="image__content">
+                              <img
+                                alt="slider"
+                                className="slider__image img6"
+                                src={slide[5].image}
+                              />
+                            </div>
                           </div>
                         </div>
                       </div>
