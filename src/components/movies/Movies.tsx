@@ -13,6 +13,7 @@ const Movies: React.FC = () => {
   }, [dispatch]);
   return (
     <div className="movies">
+      <h2 className="title">Top phim nhiều lượt xem</h2>
       <div className="movies__list">
         {pending ? (
           <div>Loading...</div>

@@ -1,5 +1,5 @@
-import { IMovie } from '../../models/IMovie';
-import { moviesTypes } from '../actionTypes/moviesTypes';
+import { IMovie } from '../../models';
+import { moviesConstants } from '../constants/moviesConstants';
 
 export interface moviesState {
   pending: boolean;
@@ -16,16 +16,16 @@ export interface FetchMoviesFailurePayload {
 }
 
 export interface FetchMoviesRequest {
-  type: typeof moviesTypes.FETCH_MOVIES_REQUEST;
+  type: typeof moviesConstants.FETCH_MOVIES_REQUEST;
 }
 
 export type FetchMoviesSuccess = {
-  type: typeof moviesTypes.FETCH_MOVIES_SUCCESS;
+  type: typeof moviesConstants.FETCH_MOVIES_SUCCESS;
   payload: FetchMoviesSuccessPayload;
 };
 
 export type FetchMoviesFailure = {
-  type: typeof moviesTypes.FETCH_MOVIES_FAILURE;
+  type: typeof moviesConstants.FETCH_MOVIES_FAILURE;
   payload: FetchMoviesFailurePayload;
 };
 

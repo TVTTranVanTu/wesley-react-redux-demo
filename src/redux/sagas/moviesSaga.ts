@@ -1,8 +1,8 @@
 import { all, call, takeLatest, put } from 'redux-saga/effects';
 import moviesApi from '../../apis/moviesAPI';
-import { IMovie, ListResponse } from '../../models/IMovie';
+import { IMovie, ListResponse } from '../../models';
 import { fetchMoviesFailure, fetchMoviesSuccess } from '../actions/moviesActions';
-import { moviesTypes } from '../actionTypes/moviesTypes';
+import { moviesConstants } from '../constants/moviesConstants';
 
 function* fetchMoviesSaga() {
   try {
@@ -24,7 +24,7 @@ function* fetchMoviesSaga() {
 }
 
 function* moviesSaga() {
-  yield all([takeLatest(moviesTypes.FETCH_MOVIES_REQUEST, fetchMoviesSaga)]);
+  yield all([takeLatest(moviesConstants.FETCH_MOVIES_REQUEST, fetchMoviesSaga)]);
 }
 
 export default moviesSaga;

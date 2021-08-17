@@ -1,21 +1,21 @@
-import { moviesTypes } from '../actionTypes/moviesTypes';
+import { moviesConstants } from '../constants/moviesConstants';
 import {
   FetchMoviesFailure,
   FetchMoviesFailurePayload,
   FetchMoviesRequest,
   FetchMoviesSuccess,
   FetchMoviesSuccessPayload,
-} from '../types/types';
+} from '../types';
 
 export const fetchMoviesRequest = (): FetchMoviesRequest => ({
-  type: moviesTypes.FETCH_MOVIES_REQUEST,
+  type: moviesConstants.FETCH_MOVIES_REQUEST,
 });
 
 export const fetchMoviesSuccess = (payload: FetchMoviesSuccessPayload): FetchMoviesSuccess => ({
-  type: moviesTypes.FETCH_MOVIES_SUCCESS,
+  type: moviesConstants.FETCH_MOVIES_SUCCESS,
   payload,
 });
 export const fetchMoviesFailure = (payload: FetchMoviesFailurePayload): FetchMoviesFailure => ({
-  type: moviesTypes.FETCH_MOVIES_FAILURE,
+  type: moviesConstants.FETCH_MOVIES_FAILURE,
   payload,
 });

@@ -4,6 +4,3 @@ export interface IMovie {
   moviethumbnail: string;
   link: string;
 }
-export interface ListResponse<T> {
-  data: T[];
-}

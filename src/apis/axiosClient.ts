@@ -2,7 +2,7 @@ import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 import queryString from 'query-string';
 
 const axiosClient = axios.create({
-  baseURL: 'https://6115042caec65d0017e9dc68.mockapi.io/api/listmovies',
+  baseURL: 'https://6115042caec65d0017e9dc68.mockapi.io/api/home',
   headers: {
     'content-type': 'application/json',
   },
